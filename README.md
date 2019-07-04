@@ -1,5 +1,6 @@
 # ZKImageLoader
-ZKImageLoader
+[![](https://jitpack.io/v/ZhuoKeTeam/ZKImageLoader.svg)](https://jitpack.io/#ZhuoKeTeam/ZKImageLoader)
+
 
 ## 使用说明
 
