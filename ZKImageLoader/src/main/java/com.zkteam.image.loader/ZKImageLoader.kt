@@ -3,6 +3,7 @@ package com.zkteam.image.loader
 import android.app.Activity
 import android.content.Context
 import android.graphics.drawable.Drawable
+import android.net.Uri
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
@@ -49,7 +50,7 @@ class ZKImageLoader {
      * 使用 Fragment 加载图片
      */
     fun load(fragment: Fragment?, imageView: ImageView, url: String) {
-        load(fragment, url).load(url).into(imageView)
+        load(fragment, url).load(Uri.parse(url)).into(imageView)
     }
 
     /**
@@ -62,7 +63,7 @@ class ZKImageLoader {
             mContext = ZKBase.context()
         }
 
-        return setDefaultInfo(Glide.with(mContext).load(url))
+        return setDefaultInfo(Glide.with(mContext).load(Uri.parse(url)))
     }
 
 
@@ -75,7 +76,7 @@ class ZKImageLoader {
         } else {
             Glide.with(fragment)
         }
-        return setDefaultInfo(requestManager.load(url))
+        return setDefaultInfo(requestManager.load(Uri.parse(url)))
     }
 
     /**
