@@ -1,6 +1,7 @@
 package com.zkteam.image.loader
 
 import android.app.Activity
+import android.app.Fragment
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.net.Uri
@@ -77,6 +78,11 @@ class ZKImageLoader {
             Glide.with(fragment)
         }
         return setDefaultInfo(requestManager.load(Uri.parse(url)))
+    }
+
+    fun load(context: Context?): RequestManager {
+        val requestManager: RequestManager = Glide.with(ZKBase.context())
+        return requestManager
     }
 
     /**
