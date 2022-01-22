@@ -1,7 +1,6 @@
 package com.zkteam.image.loader
 
 import android.app.Activity
-import android.app.Fragment
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.net.Uri
@@ -28,9 +27,9 @@ class ZKImageLoader {
      */
     private fun setDefaultInfo(glideReuqestBuilder: RequestBuilder<Drawable>): RequestBuilder<Drawable> {
         return glideReuqestBuilder
-            .placeholder(R.drawable.ic_zk_image_loader_base_place_holder)
-            .error(R.drawable.ic_zk_image_loader_base_error)
-            .fallback(R.drawable.ic_zk_image_loader_base_fallback)
+//            .placeholder(R.drawable.ic_zk_image_loader_base_place_holder)
+//            .error(R.drawable.ic_zk_image_loader_base_error)
+//            .fallback(R.drawable.ic_zk_image_loader_base_fallback)
             .transition(withCrossFade())
     }
 
